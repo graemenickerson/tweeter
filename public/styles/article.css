@@ -1,0 +1,44 @@
+article {
+  background-color: aqua;
+  padding: 1em;
+  border: 3px solid darkgrey;
+
+}
+
+article img {
+  height: 75px;
+}
+
+article h3 {
+  margin: 0px;
+  margin-top: 18px;
+}
+
+article h4 {
+  margin: 0px;
+  margin-top: 18px;
+}
+article h6 {
+  margin: 0px;
+}
+
+article p {
+  border-bottom: 3px solid darkgrey;
+  margin-bottom: 0px;
+}
+
+article span {
+  margin: 0px;
+}
+
+article div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

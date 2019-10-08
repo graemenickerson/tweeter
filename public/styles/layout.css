@@ -32,9 +32,3 @@ body {
   margin-right: auto;
   margin-top: 15px;
  }
-
- div.tweet {
-  border: 3px outset darkgrey;
-  border-top-color: transparent;
-  border-left-color: transparent;
- }
