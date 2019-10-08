@@ -32,3 +32,7 @@ form input {
 form span {
   font-family: 'Bungee', sans-serif; 
 }
+
+.neg {
+  color: red;
+}
