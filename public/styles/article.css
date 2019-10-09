@@ -3,6 +3,13 @@ article {
   padding-bottom: 0.5em;
   border: 3px solid darkgrey;
 }
+article:hover {
+  box-shadow: 5px 5px #4056A1;
+}
+
+article:hover h4 {
+  color: darkgrey;
+}
 
 article img {
   height: 50px;
@@ -12,12 +19,16 @@ article h3 {
   margin: 0px;
   margin-top: 7px;
   margin-left: 7px;
+  font-weight: 300;
 }
 
 article h4 {
   margin: 0px;
   margin-top: 7px;
+  color: #f4f1ec;
+  font-weight: 300;
 }
+
 article h6 {
   margin: 0px;
 }
