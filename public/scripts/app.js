@@ -21,6 +21,16 @@ let data234 = [
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Test case 1",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@TC1" },
+    "content": {
+      "text": "Adding another post to see what happens"
+    },
+    "created_at": 1570648186000
   }
 ];
 
@@ -28,7 +38,7 @@ const timeAgo = (givenDate) => {
   let result = 0;
   let dateNow = new Date();
   const timeDiff  = (dateNow - givenDate);
-  
+
   const min = 1000 * 60;
   const hour = 1000 * 60 * 60;
   const day = 1000 * 60 * 60 * 24;
@@ -53,8 +63,10 @@ const timeAgo = (givenDate) => {
     result = Math.round(timeDiff / (hour)) + ' hour';
   } else if (timeDiff / (min) >= 1) {//minutes
     result = Math.round(timeDiff / (min)) + ' minutes';
+  } else if (timeDiff / (min) === 1) {//minute
+    result = Math.round(timeDiff / (min)) + ' minute';
   } else {
-    result = timeDiff / (1000) + ' seconds';
+    result = 'A few seconds ago';
   }
 
   return result;
@@ -76,7 +88,7 @@ const createTweetElement = function(input) {
     <footer>
       <h6>${timeAgo(input.created_at)}</h6>
       <span name="interactions">
-        <h6>like and such</h6>
+        <h6>Like and such</h6>
       </span>
     </footer>
   `;
