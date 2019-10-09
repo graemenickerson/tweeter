@@ -37,7 +37,8 @@ article h6 {
 article p {
   border-bottom: 3px solid darkgrey;
   margin-bottom: 1px;
-  margin-top: 7px
+  margin-top: 7px;
+  word-wrap: break-word;
 }
 
 article span {
