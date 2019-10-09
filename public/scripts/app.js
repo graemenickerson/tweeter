@@ -1,10 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-const data = [
+$(document).ready(function() {
+let data234 = [
   {
     "user": {
       "name": "Newton",
@@ -61,7 +56,6 @@ const timeAgo = (givenDate) => {
 
 
 const createTweetElement = function(input) {
-
   let $tweet = $('<article>').addClass('tweet');
 
   const markup = `
@@ -87,13 +81,11 @@ const createTweetElement = function(input) {
 };
 
 const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     $('#tweet').append(createTweetElement(tweet));
   }
 };
 
 // createTweetElement(data[0]);
-renderTweets(data);
+renderTweets(data234);
+});

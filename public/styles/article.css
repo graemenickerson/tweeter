@@ -2,6 +2,7 @@ article {
   padding: 1em;
   padding-bottom: 0.5em;
   border: 3px solid darkgrey;
+  margin-bottom: 20px;
 }
 article:hover {
   box-shadow: 5px 5px #4056A1;
