@@ -6,20 +6,19 @@ $(document).ready(function() {
 
   // Takes a given date and returns the approx. time since then.
   const timeAgo = (givenDate) => {
-    let result = 'A few seconds ago';
     let dateNow = new Date();
     const timeDiff  = dateNow - givenDate;
     const time = [(1000 * 60 * 60 * 24 * 365), (1000 * 60 * 60 * 24 * 30), (1000 * 60 * 60 * 24), (1000 * 60 * 60), (1000 * 60)]
     const words = ['years', 'year', 'months', 'month', 'days', 'day', 'hours', 'hour', 'minutes', 'minute'];
 
-    for (let i = 1; i < time.length; i++) {
+    for (let i = 0; i < time.length; i++) {
       if ((timeDiff / time[i]) >= 2) {
-        result = `${Math.round(timeDiff / time[i])} ${words[i * 2]}`;
+        return `${Math.round(timeDiff / time[i])} ${words[i * 2]}`;
       } else if ((timeDiff / time[i]) >= 1) {
-        result = `${Math.round(timeDiff / time[i])} ${words[(i * 2) + 1]}`;
+        return `${Math.round(timeDiff / time[i])} ${words[(i * 2) + 1]}`;
       }
     }
-    return result;
+    return 'A few seconds ago';
   };
 
   // Takes a json object and returns a formatted html string
@@ -59,13 +58,17 @@ $(document).ready(function() {
   };
 
   // Loads the tweets into the main document
-  const loadTweets = () => {
+  const loadTweets = (initailLoad = true) => {
     $.ajax({
       url: '/tweets',
       method: 'GET',
     })
     .then(function (data) {
-      renderTweets(data);
+      if (initailLoad){
+        renderTweets(data);
+      } else {
+        renderTweets([data[data.length - 1]]);
+      }
     });
   };
 
@@ -76,7 +79,7 @@ $(document).ready(function() {
     const serializedData = $(this).serialize();
     const data = $('textarea').val();
     if (data.length > 140) {
-      renderError("Post too long!!");
+      renderError("Your post is too long!!");
     } else if (data === '' || data === null ) {
       renderError("There needs to be text in the input field!");
     } else {
@@ -91,7 +94,7 @@ $(document).ready(function() {
           $('.counter').text(140);
           $('#new-post').slideToggle("slow");
           // removefocus
-          loadTweets();
+          loadTweets(false);
         });
     }
   });

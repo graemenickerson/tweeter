@@ -30,8 +30,8 @@ $(document).ready(function() {
 
   // Scrolls the window to the top and toggles the new tweet form
   $("#to-top").click(function() {
-     $("HTML, BODY").animate({ scrollTop: 0 }, 1000); 
-     $('#new-post').slideToggle("slow");
+    $("HTML, BODY").animate({ scrollTop: 0 }, 1000); 
+    $('#new-post').slideToggle("slow");
     $('textarea').focus();
   }); 
 
