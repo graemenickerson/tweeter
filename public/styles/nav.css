@@ -24,6 +24,8 @@ nav > button {
   background-color: #4056A1;
   border: transparent;
   color: #ffffff;
+  word-wrap: break-word;
+  max-width: 275px;
 }
 
 nav > button:hover {
