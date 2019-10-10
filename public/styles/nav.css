@@ -29,3 +29,8 @@ nav > button {
 nav > button:hover {
   color: #404040;
 }
+
+.scrolled {
+  background-color: #a83a36;
+  background-image: url('../images/gplay.png');
+}

@@ -26,6 +26,11 @@ $(document).ready(function() {
       document.getElementById("to-top").style.display = "none";
       document.getElementById("write-tweet").style.display = "block";
     }
+    if($(document).scrollTop() > 280 && $(window).width() < 1024) {
+      $('nav').addClass('scrolled');
+    } else {
+      $('nav').removeClass('scrolled');
+    }
   });
 
   // Scrolls the window to the top and toggles the new tweet form

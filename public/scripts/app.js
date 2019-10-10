@@ -42,7 +42,7 @@ $(document).ready(function() {
       <footer>
         <h6>${timeAgo(input.created_at)}</h6>
         <span name="interactions">
-          <h6>Like and such</h6>
+          <h6>⚑ 🔁 ♥︎</h6>
         </span>
       </footer>
     `;
