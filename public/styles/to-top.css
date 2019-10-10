@@ -12,7 +12,7 @@
   padding: 5px; /* Some padding */
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 50%; /* Rounded corners */
   font-size: 20px; /* Increase font size */
 }
 

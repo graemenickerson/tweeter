@@ -21,8 +21,10 @@ $(document).ready(function() {
   $(document).scroll(function() {
     if($(document).scrollTop() > 20) {
       document.getElementById("to-top").style.display = "block";
+      document.getElementById("write-tweet").style.display = "none";
     } else {
       document.getElementById("to-top").style.display = "none";
+      document.getElementById("write-tweet").style.display = "block";
     }
   });
 
