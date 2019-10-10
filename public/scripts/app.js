@@ -1,5 +1,10 @@
+// app.js
+// Graeme Nickerson
+// October 2019
+
 $(document).ready(function() {
 
+  // Takes a given date and returns the approx. time since then.
   const timeAgo = (givenDate) => {
     let result = 'A few seconds ago';
     let dateNow = new Date();
@@ -17,6 +22,7 @@ $(document).ready(function() {
     return result;
   };
 
+  // Takes a json object and returns a formatted html string
   const createTweetElement = function(input) {
     const escape = function(str) {
       let div = document.createElement('div');
@@ -45,12 +51,14 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Loops through each object in a database array and send them for formatting.
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       $('#tweet').prepend(createTweetElement(tweet));
     }
   };
 
+  // Loads the tweets into the main document
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -61,6 +69,7 @@ $(document).ready(function() {
     });
   };
 
+  // Posts the new tweet to the database and calls loadTweet
   $('#new-post').submit(function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
@@ -85,6 +94,7 @@ $(document).ready(function() {
     }
   });
 
+  // Toggles visibility of new tweet form
   $('#write-tweet').click(function() {
     $('#new-post').slideToggle("slow");
     $('textarea').focus();

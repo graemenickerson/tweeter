@@ -1,9 +1,9 @@
 // composer-char-counter.js
-//Graeme Nickeson
+// Graeme Nickeson
 // October 2019
 
-
 $(document).ready(function() {
+
   // Updates the label below the form input to show remaining characters available.
   $('[name="text"]').keyup(function() {
     const numOfChars = $(this).val().length;
