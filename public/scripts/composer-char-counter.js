@@ -21,11 +21,11 @@ $(document).ready(function() {
   // bar with the patterned backround will be displayed as the user scrolls.
   $(document).scroll(function() {
     if ($(document).scrollTop() > 20) {
-      document.getElementById("to-top").style.display = "block";
-      document.getElementById("write-tweet").style.display = "none";
+      $('#to-top').show();
+      $('#write-tweet').hide();
     } else {
-      document.getElementById("to-top").style.display = "none";
-      document.getElementById("write-tweet").style.display = "block";
+      $('#to-top').hide();
+      $('#write-tweet').show();
     }
     if ($(document).scrollTop() > 280 && $(window).width() < 1024) {
       $('nav').addClass('scrolled');
