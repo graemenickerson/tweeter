@@ -3,7 +3,6 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
@@ -14,9 +13,8 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
     <link rel="stylesheet" href="/styles/to-top.css" type="text/css" />
-    
-  </head>
 
+  </head>
   <body>
 
     <!-- Top nav bar (fixed) -->
@@ -39,6 +37,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <!-- New tweet form and error messages -->
       <section class="new-tweet">
         <div class='Error' id='Error'>
           <span>
@@ -53,16 +52,13 @@
         </form>
       </section>
 
-      <!-- Place for tweets to go -->
+      <!-- Container for tweets to go -->
       <div id="tweet"></div>
       
+      <!-- Return to top button -->
       <button id='to-top'>▲</button>
+
     </main>
-    <footer>
-      <br>
-      <br>
-      <br>
-    </footer>
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>

@@ -1,3 +1,6 @@
+/* layout.css
+  Graeme Nickerson
+  October 2019 */
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -50,20 +53,17 @@ body {
     flex-direction: row;
     margin-top: 120px;
   }
-
   nav {
     background-color: #4056A1;
   }
   main {
     width: 1500px;
   }
-
   header {
     margin: 25px;
     margin-top: 12px;
     width: auto;
   }
-
   #tweet {
     margin: 25px;
     margin-top: 0px;

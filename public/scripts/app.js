@@ -8,7 +8,7 @@ $(document).ready(function() {
   const timeAgo = (givenDate) => {
     let dateNow = new Date();
     const timeDiff  = dateNow - givenDate;
-    const time = [(1000 * 60 * 60 * 24 * 365), (1000 * 60 * 60 * 24 * 30), (1000 * 60 * 60 * 24), (1000 * 60 * 60), (1000 * 60)]
+    const time = [(1000 * 60 * 60 * 24 * 365), (1000 * 60 * 60 * 24 * 30), (1000 * 60 * 60 * 24), (1000 * 60 * 60), (1000 * 60)];
     const words = ['years', 'year', 'months', 'month', 'days', 'day', 'hours', 'hour', 'minutes', 'minute'];
 
     for (let i = 0; i < time.length; i++) {
@@ -42,7 +42,7 @@ $(document).ready(function() {
       <footer>
         <h6>${timeAgo(input.created_at)}</h6>
         <span name="interactions">
-          <h6>⚑ 🔁 ♥︎</h6>
+          <h6>⚑ 🔁♥︎</h6>
         </span>
       </footer>
     `;
@@ -63,13 +63,13 @@ $(document).ready(function() {
       url: '/tweets',
       method: 'GET',
     })
-    .then(function (data) {
-      if (initailLoad){
-        renderTweets(data);
-      } else {
-        renderTweets([data[data.length - 1]]);
-      }
-    });
+      .then(function(data) {
+        if (initailLoad) {
+          renderTweets(data);
+        } else {
+          renderTweets([data[data.length - 1]]);
+        }
+      });
   };
 
   // Posts the new tweet to the database and calls loadTweet
@@ -80,10 +80,9 @@ $(document).ready(function() {
     const data = $('textarea').val();
     if (data.length > 140) {
       renderError("Your post is too long!!");
-    } else if (data === '' || data === null ) {
+    } else if (data === '' || data === null) {
       renderError("There needs to be text in the input field!");
     } else {
-
       $.ajax({
         url: '/tweets',
         method: 'POST',
@@ -114,12 +113,12 @@ $(document).ready(function() {
   const renderError = function(message) {
     $('#error-message').text(message);
     $('.Error').slideDown("slow");
-  }
+  };
 
   // Removes Error Message
   const removeError = function() {
     $('.Error').slideUp("slow");
-  }
+  };
 
   loadTweets();
 });

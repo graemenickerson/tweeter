@@ -12,6 +12,11 @@ article:hover h4 {
   color: darkgrey;
 }
 
+article:hover span {
+  display: flex;
+  color: darkgrey;
+}
+
 article img {
   height: 50px;
 }
@@ -43,6 +48,7 @@ article p {
 
 article span {
   margin: 0px;
+  display: none;
 }
 
 article > header {
@@ -60,4 +66,8 @@ article footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+article > footer > h6 {
+  margin-bottom: 6px;;
 }

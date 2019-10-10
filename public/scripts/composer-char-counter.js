@@ -1,5 +1,5 @@
 // composer-char-counter.js
-// Graeme Nickeson
+// Graeme Nickerson
 // October 2019
 
 $(document).ready(function() {
@@ -17,16 +17,17 @@ $(document).ready(function() {
   });
 
   // Tracks the scroll level of the window and shows the to top button
-  // when scrolled down.
+  // when scrolled down. If the narrow view of the site is active a nav
+  // bar with the patterned backround will be displayed as the user scrolls.
   $(document).scroll(function() {
-    if($(document).scrollTop() > 20) {
+    if ($(document).scrollTop() > 20) {
       document.getElementById("to-top").style.display = "block";
       document.getElementById("write-tweet").style.display = "none";
     } else {
       document.getElementById("to-top").style.display = "none";
       document.getElementById("write-tweet").style.display = "block";
     }
-    if($(document).scrollTop() > 280 && $(window).width() < 1024) {
+    if ($(document).scrollTop() > 280 && $(window).width() < 1024) {
       $('nav').addClass('scrolled');
     } else {
       $('nav').removeClass('scrolled');
@@ -35,9 +36,9 @@ $(document).ready(function() {
 
   // Scrolls the window to the top and toggles the new tweet form
   $("#to-top").click(function() {
-    $("HTML, BODY").animate({ scrollTop: 0 }, 1000); 
+    $("HTML, BODY").animate({ scrollTop: 0 }, 1000);
     $('#new-post').slideToggle("slow");
     $('textarea').focus();
-  }); 
+  });
 
 });
