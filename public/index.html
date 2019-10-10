@@ -40,6 +40,12 @@
     <main class="container">
 
       <section class="new-tweet">
+        <div class='Error' id='Error'>
+          <span>
+            <h5 id='error-message'>placeholder</h5>
+            <button id='error-dismiss'>✖</button>
+          </span>
+        </div>
         <form id='new-post'action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input id='submit-post' type="submit" value="Tweet">
