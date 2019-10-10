@@ -18,6 +18,11 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(input) {
+    const escape = function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
     let $tweet = $('<article>');
 
     const markup = `
@@ -28,7 +33,7 @@ $(document).ready(function() {
         </div>
         <h4>${input.user.handle}</h4>
       </header>
-      <p>${input.content.text}</p>
+      <p>${escape(input.content.text)}</p>
       <footer>
         <h6>${timeAgo(input.created_at)}</h6>
         <span name="interactions">
@@ -46,11 +51,20 @@ $(document).ready(function() {
     }
   };
 
+  const loadTweets = () => {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+    })
+    .then(function (data) {
+      renderTweets(data);
+    });
+  };
+
   $('#new-post').submit(function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
     const data = $('textarea').val();
-    console.log(data);
     if (data.length > 140) {
       alert("Post too long!!");
     } else if (data === '' || data === null ) {
@@ -64,22 +78,17 @@ $(document).ready(function() {
         .then(() => {
           $('textarea').val('');
           $('.counter').text(140);
+          $('#new-post').slideToggle("slow");
           // removefocus
           loadTweets();
         });
     }
   });
 
-  const loadTweets = () => {
-    $.ajax({
-      url: '/tweets',
-      method: 'GET',
-    })
-    .then(function (data) {
-      renderTweets(data);
-    });
-
-  };
+  $('#write-tweet').click(function() {
+    $('#new-post').slideToggle("slow");
+    $('textarea').focus();
+  });
 
   loadTweets();
 });

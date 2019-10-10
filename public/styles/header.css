@@ -6,6 +6,7 @@ body > header {
   background-image: url('../images/gplay.png');
   color: white;
   padding-top: 125px;
+  z-index: 1;
 }
 
 body > header img {

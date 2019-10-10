@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/to-top.css" type="text/css" />
+    
   </head>
 
   <body>
@@ -21,7 +22,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <button>Write a new tweet</button>
+      <button id='write-tweet'>Write a new tweet</button>
     </nav>
 
     <!-- Header with user image -->
@@ -39,7 +40,6 @@
     <main class="container">
 
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form id='new-post'action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input id='submit-post' type="submit" value="Tweet">
@@ -50,6 +50,7 @@
       <!-- Place for tweets to go -->
       <div id="tweet"></div>
       
+      <button id='to-top'>▲</button>
     </main>
     <footer>
       <br>

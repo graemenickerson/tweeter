@@ -20,3 +20,12 @@ nav span {
   font-size: 1.5em;
 }
 
+nav > button {
+  background-color: #4056A1;
+  border: transparent;
+  color: #ffffff;
+}
+
+nav > button:hover {
+  color: #a83a36;
+}
