@@ -3,4 +3,3 @@ node_modules/
 .DS_Store
 public/styles
 
-public/css *.map
