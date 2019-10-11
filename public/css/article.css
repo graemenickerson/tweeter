@@ -1,0 +1,102 @@
+article {
+  padding-bottom: 0.5em;
+  border: 3px solid #545149;
+  margin-bottom: 20px;
+}
+
+article:hover {
+  -webkit-box-shadow: 5px 5px #4056A1;
+          box-shadow: 5px 5px #4056A1;
+}
+
+article:hover h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #545149;
+}
+
+article:hover span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #545149;
+}
+
+article img {
+  height: 50px;
+}
+
+article h3 {
+  margin: 0px;
+  margin-top: 7px;
+  margin-left: 7px;
+  font-weight: 300;
+}
+
+article h4 {
+  margin: 0px;
+  margin-top: 7px;
+  display: none;
+  font-weight: 300;
+}
+
+article h6 {
+  margin: 0px;
+}
+
+article p {
+  border-bottom: 3px solid #545149;
+  margin-bottom: 1px;
+  margin-top: 7px;
+  word-wrap: break-word;
+}
+
+article span {
+  margin: 0px;
+  display: none;
+}
+
+article header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#from-now {
+  margin-bottom: 6px;
+}
+/*# sourceMappingURL=article.css.map */

@@ -1,0 +1,42 @@
+// nav.scss
+// Graeme Nickerson
+// October 2019
+
+$primary-color: #4056A1;
+$secondary-color: #a83a36;
+$background-color: #f4f1ec;
+$text-primary: #ffffff;
+$text-secondary: #545149;
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top : 0;
+  height: 120px;
+  min-width: 485px;
+  z-index: 3;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $text-primary;
+  font-family: 'Bungee', sans-serif; 
+  span {
+    font-size: 1.5em;
+  }
+  button {
+    background-color:transparent;
+    border: transparent;
+    color: $text-primary;
+    word-wrap: break-word;
+    width: 175px;
+    &:hover {
+      color: $text-secondary;
+    }
+  }
+}
+.scrolled {
+  background-color: $secondary-color;
+  background-image: url('../images/gplay.png');
+}

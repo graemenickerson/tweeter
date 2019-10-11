@@ -1,0 +1,74 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  min-width: 485px;
+}
+
+@media only screen and (max-width: 1024px) {
+  body > header {
+    margin-top: 0px;
+  }
+  nav {
+    background-color: transparent;
+  }
+  main {
+    margin: 25px;
+  }
+  article {
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 120px;
+  }
+  body nav {
+    background-color: #4056A1;
+  }
+  body header {
+    margin: 25px;
+    margin-top: 12px;
+    width: auto;
+  }
+  body main {
+    width: 2000px;
+  }
+  body main section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  body main #tweet {
+    margin: 25px;
+    margin-top: 12px;
+  }
+  body main article {
+    padding: 0.25em;
+  }
+  body main article header {
+    margin: 0px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

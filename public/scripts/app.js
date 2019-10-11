@@ -23,7 +23,7 @@ $(document).ready(function() {
       </header>
       <p>${escape(input.content.text)}</p>
       <footer>
-        <h6>${moment(input.created_at).fromNow()}</h6>
+        <h6 id="from-now">${moment(input.created_at).fromNow()}</h6>
         <span name="interactions">
           <h6>⚑ 🔁♥︎</h6>
         </span>

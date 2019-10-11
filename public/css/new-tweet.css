@@ -1,0 +1,85 @@
+div.Error {
+  padding: 1em;
+  display: none;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #a83a36;
+  background-color: transparent;
+}
+
+div.Error span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: #a83a36 solid 3px;
+  padding: 5px;
+}
+
+div.Error span button {
+  background-color: transparent;
+  color: #a83a36;
+  height: 25px;
+  border: transparent;
+}
+
+div.Error span button:hover {
+  color: #545149;
+}
+
+div.Error span h5 {
+  margin: 0px;
+}
+
+form {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  z-index: 0;
+}
+
+form textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f1ec;
+  width: 100%;
+  height: 2em;
+  border-color: transparent;
+  border-bottom-color: #4056A1;
+  border-bottom-width: 5px;
+  color: #545149;
+}
+
+form input {
+  margin-top: 5px;
+  margin-right: 65%;
+  background-color: #4056A1;
+  color: #ffffff;
+  font-family: 'Bungee', sans-serif;
+}
+
+form input:hover {
+  color: #545149;
+}
+
+form span {
+  font-family: 'Bungee', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.neg {
+  color: #a83a36;
+}
+/*# sourceMappingURL=new-tweet.css.map */

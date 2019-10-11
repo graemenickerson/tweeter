@@ -1,0 +1,44 @@
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  min-width: 485px;
+  z-index: 3;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+  font-family: 'Bungee', sans-serif;
+}
+
+nav span {
+  font-size: 1.5em;
+}
+
+nav button {
+  background-color: transparent;
+  border: transparent;
+  color: #ffffff;
+  word-wrap: break-word;
+  width: 175px;
+}
+
+nav button:hover {
+  color: #545149;
+}
+
+.scrolled {
+  background-color: #a83a36;
+  background-image: url("../images/gplay.png");
+}
+/*# sourceMappingURL=nav.css.map */

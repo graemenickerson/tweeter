@@ -1,0 +1,72 @@
+// article.scss
+// Graeme Nickerson
+// October 2019
+
+$primary-color: #4056A1;
+$secondary-color: #a83a36;
+$background-color: #f4f1ec;
+$text-primary: #ffffff;
+$text-secondary: #545149;
+
+article {
+  padding-bottom: 0.5em;
+  border: 3px solid $text-secondary;
+  margin-bottom: 20px;
+  &:hover {
+    box-shadow: 5px 5px $primary-color;
+    h4 {
+      display: flex;
+      color: $text-secondary;
+    }
+    span {
+      display: flex;
+      color: $text-secondary;
+    }
+  }
+  img {
+    height: 50px;
+  }
+  h3 {
+    margin: 0px;
+    margin-top: 7px;
+    margin-left: 7px;
+    font-weight: 300;
+  }
+  h4 {
+    margin: 0px;
+    margin-top: 7px;
+    display: none;
+    font-weight: 300;
+  }
+  h6 {
+    margin: 0px;
+  }
+  p {
+    border-bottom: 3px solid $text-secondary;
+    margin-bottom: 1px;
+    margin-top: 7px;
+    word-wrap: break-word;
+  }
+  span {
+    margin: 0px;
+    display: none;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+#from-now {
+  margin-bottom: 6px;
+}
