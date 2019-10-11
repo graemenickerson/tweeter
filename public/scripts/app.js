@@ -4,23 +4,6 @@
 
 $(document).ready(function() {
 
-  // Takes a given date and returns the approx. time since then.
-  const timeAgo = (givenDate) => {
-    let dateNow = new Date();
-    const timeDiff  = dateNow - givenDate;
-    const time = [(1000 * 60 * 60 * 24 * 365), (1000 * 60 * 60 * 24 * 30), (1000 * 60 * 60 * 24), (1000 * 60 * 60), (1000 * 60)];
-    const words = ['years', 'year', 'months', 'month', 'days', 'day', 'hours', 'hour', 'minutes', 'minute'];
-
-    for (let i = 0; i < time.length; i++) {
-      if ((timeDiff / time[i]) >= 2) {
-        return `${Math.round(timeDiff / time[i])} ${words[i * 2]}`;
-      } else if ((timeDiff / time[i]) >= 1) {
-        return `${Math.round(timeDiff / time[i])} ${words[(i * 2) + 1]}`;
-      }
-    }
-    return 'A few seconds ago';
-  };
-
   // Takes a json object and returns a formatted html string
   const createTweetElement = function(input) {
     const escape = function(str) {
@@ -40,7 +23,7 @@ $(document).ready(function() {
       </header>
       <p>${escape(input.content.text)}</p>
       <footer>
-        <h6>${timeAgo(input.created_at)}</h6>
+        <h6>${moment(input.created_at).fromNow()}</h6>
         <span name="interactions">
           <h6>⚑ 🔁♥︎</h6>
         </span>

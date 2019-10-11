@@ -43,7 +43,7 @@ article p {
   border-bottom: 3px solid darkgrey;
   margin-bottom: 1px;
   margin-top: 7px;
-  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 article span {
