@@ -57,7 +57,7 @@ body {
     background-color: #4056A1;
   }
   main {
-    width: 700px;
+    width: 1500px;
   }
   header {
     margin: 25px;
@@ -66,10 +66,11 @@ body {
   }
   #tweet {
     margin: 25px;
-    margin-top: 0px;
+    margin-top: 12px;
   }
   main > section {
-    padding: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   article {
     padding: 0.25em;
